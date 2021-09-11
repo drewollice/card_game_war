@@ -3,7 +3,6 @@ package card_game.collections;
 import card_game.Player;
 import card_game.cards.Card;
 
-import java.io.Serial;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -12,7 +11,6 @@ import java.util.Stack;
 
 public class CardCollection extends Stack<Card>
 {
-	@Serial
 	private static final long serialVersionUID = - 6077104032431556622L;
 	
 	final private Player owner;

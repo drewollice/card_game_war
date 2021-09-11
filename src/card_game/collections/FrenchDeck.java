@@ -6,11 +6,9 @@ import card_game.cards.Color;
 import card_game.cards.Rank;
 import card_game.cards.Suit;
 
-import java.io.Serial;
 
 public class FrenchDeck extends Deck
 {
-	@Serial
 	private static final long serialVersionUID = - 8022321187795010922L;
 	
 	public FrenchDeck ()

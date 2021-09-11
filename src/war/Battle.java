@@ -67,6 +67,8 @@ public class Battle
 		System.out.println(this.player2.getName() + " Deck:\t" + this.player2.getDeck().size() + "\tDiscard:\t" + this.player2.getDiscard().size());
 		
 		new Scanner(System.in).nextLine();// Toggle comment for testing.
+
+		
 	}
 	
 	private void drawCards ()

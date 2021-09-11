@@ -2,11 +2,9 @@ package card_game.collections;
 
 import card_game.Player;
 
-import java.io.Serial;
 
 public class Deck extends CardCollection
 {
-	@Serial
 	private static final long serialVersionUID = 8117253323776284937L;
 	
 	public Deck ()
