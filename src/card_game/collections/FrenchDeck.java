@@ -17,46 +17,54 @@ public class FrenchDeck extends Deck
 		
 		Card card = null;
 		
-		for (final Suit suit : Suit.values())
+		for ( final Suit suit : Suit.values() )
 		{
-			for (final Rank rank : Rank.values())
+			for ( final Rank rank : Rank.values() )
 			{
-				if (suit.equals(Suit.CLUBS) || suit.equals(Suit.SPADES))
+				if ( suit.equals( Suit.CLUBS ) || suit.equals( Suit.SPADES ) )
 				{
-					card = new Card(rank, suit, Color.BLACK);
+					card = new Card( rank,
+									 suit,
+									 Color.BLACK );
 				}
-				else if (suit.equals(Suit.DIAMONDS) || suit.equals(Suit.HEARTS))
+				else if ( suit.equals( Suit.DIAMONDS ) || suit.equals( Suit.HEARTS ) )
 				{
-					card = new Card(rank, suit, Color.RED);
+					card = new Card( rank,
+									 suit,
+									 Color.RED );
 				}
 				
-				this.push(card);
+				this.push( card );
 			}
 		}
 		shuffleCards();
-//		this.sort(Card::compareTo);
+		//		this.sort(Card::compareTo);
 	}
 	
-	public FrenchDeck (final Player owner)
+	public FrenchDeck ( final Player owner )
 	{
-		super(owner);
+		super( owner );
 		
 		Card card = null;
 		
-		for (final Suit suit : Suit.values())
+		for ( final Suit suit : Suit.values() )
 		{
-			for (final Rank rank : Rank.values())
+			for ( final Rank rank : Rank.values() )
 			{
-				if (suit.equals(Suit.CLUBS) || suit.equals(Suit.SPADES))
+				if ( suit.equals( Suit.CLUBS ) || suit.equals( Suit.SPADES ) )
 				{
-					card = new Card(rank, suit, Color.BLACK);
+					card = new Card( rank,
+									 suit,
+									 Color.BLACK );
 				}
-				else if (suit.equals(Suit.DIAMONDS) || suit.equals(Suit.HEARTS))
+				else if ( suit.equals( Suit.DIAMONDS ) || suit.equals( Suit.HEARTS ) )
 				{
-					card = new Card(rank, suit, Color.RED);
+					card = new Card( rank,
+									 suit,
+									 Color.RED );
 				}
 				
-				this.push(card);
+				this.push( card );
 			}
 		}
 		shuffleCards();

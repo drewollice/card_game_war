@@ -1,25 +1,31 @@
-
 import card_game.Player;
-import card_game.collections.Deck;
 import card_game.collections.FrenchDeck;
 import war.Battle;
 
 public class Driver
 {
-	public static void main (final String[] args)
+	public static void main ( final String[] args )
 	{
-		Deck.dealCards(new FrenchDeck(), Player.values());
+		// Create a new Deck and deal cards to all players.
+		new FrenchDeck().dealCards( Player.values() );
 		
-		for (int i = 1; true; i++)
+		boolean anotherRound = true;
+		
+		for ( int i = 1; anotherRound; i++ )
 		{
-			System.out.println("Round Number:\t" + i);
-			final Battle battle = new Battle(Player.PLAYER_1, Player.PLAYER_2).run();
+			System.out.println( "Round Number:\t" + i );
 			
-			if (battle.isGameOver())
+			final Battle battle = Battle.doBattle( Player.PLAYER_1,
+												   Player.PLAYER_2 );
+			
+			anotherRound = ! battle.isGameOver();
+			
+			if ( battle.isGameOver() )
 			{
-				System.out.println(battle.getLoserOfGame().getName() + " loses due to running out of cards.\nggez");
-				System.exit(0);
+				System.out.println( battle.getLoserOfGame()
+										  .getName() + " loses due to running out of cards.\nggez" );
 			}
+			
 			System.out.println();
 		}
 	}

@@ -9,25 +9,27 @@ public class Deck extends CardCollection
 	
 	public Deck ()
 	{
-		super(null);
+		super( null );
 	}
 	
-	public Deck (final Player owner)
+	public Deck ( final Player owner )
 	{
-		super(owner);
+		super( owner );
 	}
 	
-	public static void dealCards (final CardCollection cardCollection, final Player... players)
+	public void dealCards ( final Player... players )
 	{
-		while (! cardCollection.isEmpty())
+		while ( ! this.isEmpty() )
 		{
-			for (final Player player : players)
+			for ( final Player player : players )
 			{
-				if (cardCollection.peek() != null)
+				if ( this.peek() != null )
 				{
-					player.getDeck().push(cardCollection.pop());
+					player.getDeck()
+						  .push( this.pop() );
 				}
 			}
 		}
 	}
+	
 }
