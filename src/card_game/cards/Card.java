@@ -28,7 +28,7 @@ public class Card implements Comparable< Card >
 	public String toString ()
 	{
 		return this.faceUp
-			   ? this.suit.getText() + this.rank.getText()
+			   ? this.color + this.suit.getText() + " " + this.rank.getText() + "\u001B[0m"
 			   : "FACE-DOWN";
 	}
 	
